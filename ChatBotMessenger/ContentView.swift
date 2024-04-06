@@ -18,11 +18,11 @@ struct ContentView: View {
             HStack {
                 Text("iBot")
                     .font(.system(size: 35, weight: .bold, design: .rounded))
-                    .foregroundStyle(Color(.label))
+                    .foregroundStyle(Color(.label).gradient)
                 
-                Image(systemName: "bubble.fill")
+                Image(systemName: "bubble.left.and.text.bubble.right.fill")
                     .font(.system(size: 20))
-                    .foregroundStyle(Color("message"))
+                    .foregroundStyle(Color("messageM").gradient)
             }
             
             // MARK: - ScrollView
@@ -37,8 +37,8 @@ struct ContentView: View {
                                 .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .padding()
                                 .foregroundStyle(.white)
-                                .background(Color("message"))
-                                .cornerRadius(15)
+                                .background(Color("messageM").gradient)
+                                .cornerRadius(20)
                                 .padding(.horizontal, 15)
                                 .padding(.bottom, 10)
                         }
@@ -47,8 +47,8 @@ struct ContentView: View {
                             Text(message)
                                 .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(15)
+                                .background(Color.gray.opacity(0.2).gradient)
+                                .cornerRadius(20)
                                 .padding(.horizontal, 15)
                                 .padding(.bottom, 10)
                             Spacer()
@@ -57,20 +57,15 @@ struct ContentView: View {
                 }.rotationEffect(.degrees(180))
                 
             }.rotationEffect(.degrees(180))
-                .background(
-                    LinearGradient(
-                        colors: [.gray.opacity(0.5), .white.opacity(0.2)],
-                        startPoint: .top,
-                        endPoint: .bottom)
-                )
+                .background(.thickMaterial)
                 .cornerRadius(15)
-
-
+            
+            // MARK: - TextField
             HStack {
                 TextField("Message", text: $messageText)
                     .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(15)
+                    .background(Color.gray.opacity(0.2).gradient)
+                    .cornerRadius(20)
                     .onSubmit {
                         sendMessage(message: messageText)
                     }
@@ -81,7 +76,7 @@ struct ContentView: View {
                     Image(systemName: "paperplane.fill")
                 })
                 .font(.system(size: 25))
-                .foregroundStyle(Color("message"))
+                .foregroundStyle(Color("messageM").gradient)
                 .padding(.horizontal, 10)
             }
             .padding()

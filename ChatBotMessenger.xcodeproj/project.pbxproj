@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		E41E2DB62BC090B10079C0C3 /* ChatBotMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E2DB52BC090B10079C0C3 /* ChatBotMessengerApp.swift */; };
 		E41E2DB82BC090B10079C0C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E2DB72BC090B10079C0C3 /* ContentView.swift */; };
-		E41E2DBA2BC090B20079C0C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41E2DB92BC090B20079C0C3 /* Assets.xcassets */; };
 		E41E2DBD2BC090B20079C0C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41E2DBC2BC090B20079C0C3 /* Preview Assets.xcassets */; };
 		E4B62A512BC18A8300D7C73F /* BotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B62A502BC18A8300D7C73F /* BotResponse.swift */; };
+		E4B62A532BC1ABF100D7C73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B62A522BC1ABF100D7C73F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E41E2DB22BC090B10079C0C3 /* ChatBotMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBotMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41E2DB52BC090B10079C0C3 /* ChatBotMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotMessengerApp.swift; sourceTree = "<group>"; };
 		E41E2DB72BC090B10079C0C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E41E2DB92BC090B20079C0C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E41E2DBC2BC090B20079C0C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4B62A502BC18A8300D7C73F /* BotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotResponse.swift; sourceTree = "<group>"; };
+		E4B62A522BC1ABF100D7C73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 				E41E2DB52BC090B10079C0C3 /* ChatBotMessengerApp.swift */,
 				E41E2DB72BC090B10079C0C3 /* ContentView.swift */,
 				E4B62A502BC18A8300D7C73F /* BotResponse.swift */,
-				E41E2DB92BC090B20079C0C3 /* Assets.xcassets */,
+				E4B62A522BC1ABF100D7C73F /* Assets.xcassets */,
 				E41E2DBB2BC090B20079C0C3 /* Preview Content */,
 			);
 			path = ChatBotMessenger;
@@ -128,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B62A532BC1ABF100D7C73F /* Assets.xcassets in Resources */,
 				E41E2DBD2BC090B20079C0C3 /* Preview Assets.xcassets in Resources */,
-				E41E2DBA2BC090B20079C0C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,6 @@
 		E41E2DC12BC090B20079C0C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -300,7 +299,6 @@
 		E41E2DC22BC090B20079C0C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
