@@ -12,13 +12,17 @@ import Foundation
 func getBotResponse(message: String) -> String {
     let tempMessage = message.lowercased()
     
-    if tempMessage.contains("hello") {
+    if tempMessage.contains("hi") {
         return ("Hey there!")
-    } else if tempMessage.contains("goodbye"){
-        return "Talk to you later!"
-    } else if tempMessage.contains("how are you") {
-        return "I'm great, how about you?"
+    } else if tempMessage.contains("sup?"){
+        return "Nothing much. How are you?"
+    } else if tempMessage.contains("what are you doing?") {
+        return "Just chilling:)"
+    } else if tempMessage.contains("wanna come out for a walk?") {
+        return "Sure thing, see yaa later!"
     } else {
         return "That's awesome."
     }
 }
+
+
