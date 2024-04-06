@@ -35,11 +35,11 @@ struct ContentView: View {
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(15)
                     .onSubmit {
-                        //
+                        // sendMessages
                     }
                 
                 Button(action: {
-                    
+                    // sendMessages
                 }, label: {
                     Image(systemName: "paperplane.fill")
                 })
