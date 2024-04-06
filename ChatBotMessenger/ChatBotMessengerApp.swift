@@ -1,9 +1,11 @@
+//  /*
 //
-//  ChatBotMessengerApp.swift
-//  ChatBotMessenger
+//  Project: ChatBotMessenger
+//  File: ChatBotMessengerApp.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 05.04.2024
 //
-//  Created by Elaidzha Shchukin on 05.04.2024.
-//
+//  */
 
 import SwiftUI
 
