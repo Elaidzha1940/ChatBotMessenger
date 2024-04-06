@@ -34,6 +34,7 @@ struct ContentView: View {
                         HStack {
                             Spacer()
                             Text(nemMessage)
+                                .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .padding()
                                 .foregroundStyle(.white)
                                 .background(Color("message"))
@@ -41,12 +42,32 @@ struct ContentView: View {
                                 .padding(.horizontal, 15)
                                 .padding(.bottom, 10)
                         }
+                    } else {
+                        HStack {
+                            Text(message)
+                                .font(.system(size: 18, weight: .medium, design: .rounded))
+                                .padding()
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(15)
+                                .padding(.horizontal, 15)
+                                .padding(.bottom, 10)
+                            Spacer()
+                        }
                     }
-                }
-            }
-            
+                }.rotationEffect(.degrees(180))
+                
+            }.rotationEffect(.degrees(180))
+                .background(
+                    LinearGradient(
+                        colors: [.gray.opacity(0.5), .white.opacity(0.2)],
+                        startPoint: .top,
+                        endPoint: .bottom)
+                )
+                .cornerRadius(15)
+
+
             HStack {
-                TextField("Type something", text: $messageText)
+                TextField("Message", text: $messageText)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(15)
