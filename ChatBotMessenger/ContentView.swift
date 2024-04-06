@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var messageText = ""
-    @State var message: [String] = ["Welcome to Chat Bot 1.0"]
+    @State var messages: [String] = ["Welcome to Chat Bot 1.0"]
     
     var body: some View {
         VStack {
@@ -25,8 +25,24 @@ struct ContentView: View {
                     .foregroundStyle(Color("message"))
             }
             
+            // MARK: - ScrollView
             ScrollView {
-                // Messages
+                ForEach(messages, id: \.self) { message in
+                    if message.contains("[USER]") {
+                        let nemMessage = message.replacingOccurrences(of: "[USER]", with: "")
+                        
+                        HStack {
+                            Spacer()
+                            Text(nemMessage)
+                                .padding()
+                                .foregroundStyle(.white)
+                                .background(Color("message"))
+                                .cornerRadius(15)
+                                .padding(.horizontal, 15)
+                                .padding(.bottom, 10)
+                        }
+                    }
+                }
             }
             
             HStack {
@@ -35,11 +51,11 @@ struct ContentView: View {
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(15)
                     .onSubmit {
-                        // sendMessages
+                        sendMessage(message: messageText)
                     }
                 
                 Button(action: {
-                    // sendMessages
+                    sendMessage(message: messageText)
                 }, label: {
                     Image(systemName: "paperplane.fill")
                 })
@@ -48,6 +64,19 @@ struct ContentView: View {
                 .padding(.horizontal, 10)
             }
             .padding()
+        }
+    }
+    
+    func sendMessage(message: String) {
+        withAnimation {
+            messages.append("[USER]" + message)
+            self.messageText = ""
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation {
+                messages.append(getBotResponse(message: message))
+            }
         }
     }
 }
